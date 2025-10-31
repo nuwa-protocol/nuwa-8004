@@ -1,3 +1,13 @@
+## Notice
+
+- Forked from https://github.com/ChaosChain/trustless-agents-erc-ri
+- This repo provides a contract reference for deploying an ERC-8004 registry on-chain and demoing it with xNUWA
+- xNUWA app repo: https://github.com/nuwa-protocol/xnuwa.app
+- Agent registration JSON required by xNUWA: see `xnuwa-agent-registration.example.json`
+- Everything below is the original upstream README kept for reference
+- More Docs: https://docs.nuwa.dev/xnuwa/overview
+---
+
 # ERC-8004 Trustless Agents Reference Implementation
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
@@ -31,11 +41,11 @@ Reference implementation for **[ERC-8004: Trustless Agents](https://eips.ethereu
 
 ERC-8004 provides three core on-chain registries that enable trustless agent interactions:
 
-| Registry | Purpose | v1.0 Implementation |
-|----------|---------|-------------------|
-| **Identity Registry** | Agent identity management | ERC-721 with URIStorage |
-| **Reputation Registry** | Feedback and scoring system | Cryptographic signatures (EIP-191/ERC-1271) |
-| **Validation Registry** | Independent work verification | URI-based evidence with tags |
+| Registry                | Purpose                       | v1.0 Implementation                         |
+| ----------------------- | ----------------------------- | ------------------------------------------- |
+| **Identity Registry**   | Agent identity management     | ERC-721 with URIStorage                     |
+| **Reputation Registry** | Feedback and scoring system   | Cryptographic signatures (EIP-191/ERC-1271) |
+| **Validation Registry** | Independent work verification | URI-based evidence with tags                |
 
 ### Key Features
 
@@ -71,13 +81,13 @@ ValidationRegistry:  0x662b40A526cb4017d947e71eAF6753BF3eeE66d8
 
 **Live Networks**:
 
-| Network | Chain ID | Identity | Reputation | Validation |
-|---------|----------|----------|------------|------------|
-| **Ethereum Sepolia** | 11155111 | [View](https://sepolia.etherscan.io/address/0x7177a6867296406881E20d6647232314736Dd09A) | [View](https://sepolia.etherscan.io/address/0xB5048e3ef1DA4E04deB6f7d0423D06F63869e322) | [View](https://sepolia.etherscan.io/address/0x662b40A526cb4017d947e71eAF6753BF3eeE66d8) |
-| **Base Sepolia** | 84532 | [View](https://sepolia.basescan.org/address/0x7177a6867296406881E20d6647232314736Dd09A) | [View](https://sepolia.basescan.org/address/0xB5048e3ef1DA4E04deB6f7d0423D06F63869e322) | [View](https://sepolia.basescan.org/address/0x662b40A526cb4017d947e71eAF6753BF3eeE66d8) |
+| Network              | Chain ID | Identity                                                                                           | Reputation                                                                                         | Validation                                                                                         |
+| -------------------- | -------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **Ethereum Sepolia** | 11155111 | [View](https://sepolia.etherscan.io/address/0x7177a6867296406881E20d6647232314736Dd09A)            | [View](https://sepolia.etherscan.io/address/0xB5048e3ef1DA4E04deB6f7d0423D06F63869e322)            | [View](https://sepolia.etherscan.io/address/0x662b40A526cb4017d947e71eAF6753BF3eeE66d8)            |
+| **Base Sepolia**     | 84532    | [View](https://sepolia.basescan.org/address/0x7177a6867296406881E20d6647232314736Dd09A)            | [View](https://sepolia.basescan.org/address/0xB5048e3ef1DA4E04deB6f7d0423D06F63869e322)            | [View](https://sepolia.basescan.org/address/0x662b40A526cb4017d947e71eAF6753BF3eeE66d8)            |
 | **Optimism Sepolia** | 11155420 | [View](https://sepolia-optimistic.etherscan.io/address/0x7177a6867296406881E20d6647232314736Dd09A) | [View](https://sepolia-optimistic.etherscan.io/address/0xB5048e3ef1DA4E04deB6f7d0423D06F63869e322) | [View](https://sepolia-optimistic.etherscan.io/address/0x662b40A526cb4017d947e71eAF6753BF3eeE66d8) |
-| **Mode Testnet** | 919 | [View](https://sepolia.explorer.mode.network/address/0x7177a6867296406881E20d6647232314736Dd09A) | [View](https://sepolia.explorer.mode.network/address/0xB5048e3ef1DA4E04deB6f7d0423D06F63869e322) | [View](https://sepolia.explorer.mode.network/address/0x662b40A526cb4017d947e71eAF6753BF3eeE66d8) |
-| **0G Testnet** | 16602 | [View](https://chainscan-galileo.0g.ai/address/0x7177a6867296406881E20d6647232314736Dd09A) | [View](https://chainscan-galileo.0g.ai/address/0xB5048e3ef1DA4E04deB6f7d0423D06F63869e322) | [View](https://chainscan-galileo.0g.ai/address/0x662b40A526cb4017d947e71eAF6753BF3eeE66d8) |
+| **Mode Testnet**     | 919      | [View](https://sepolia.explorer.mode.network/address/0x7177a6867296406881E20d6647232314736Dd09A)   | [View](https://sepolia.explorer.mode.network/address/0xB5048e3ef1DA4E04deB6f7d0423D06F63869e322)   | [View](https://sepolia.explorer.mode.network/address/0x662b40A526cb4017d947e71eAF6753BF3eeE66d8)   |
+| **0G Testnet**       | 16602    | [View](https://chainscan-galileo.0g.ai/address/0x7177a6867296406881E20d6647232314736Dd09A)         | [View](https://chainscan-galileo.0g.ai/address/0xB5048e3ef1DA4E04deB6f7d0423D06F63869e322)         | [View](https://chainscan-galileo.0g.ai/address/0x662b40A526cb4017d947e71eAF6753BF3eeE66d8)         |
 
 >  **Why These Networks?**
 > - **Ethereum Sepolia**: Industry standard testnet
@@ -290,15 +300,15 @@ v1.0 is highly optimized for gas efficiency:
 
 ### Gas Usage
 
-| Operation | Gas Cost | Notes |
-|-----------|----------|-------|
-| **Agent Registration** | ~99k gas | With tokenURI |
-| **Register with Metadata** | ~171k gas | With single metadata entry |
-| **Give Feedback** | ~276k gas | Includes signature verification |
-| **Revoke Feedback** | ~294k gas | Marks feedback as revoked |
-| **Append Response** | ~300k gas | Add response to feedback |
-| **Validation Request** | ~306k gas | Create validation request |
-| **Validation Response** | ~418k gas | Submit validation response |
+| Operation                  | Gas Cost  | Notes                           |
+| -------------------------- | --------- | ------------------------------- |
+| **Agent Registration**     | ~99k gas  | With tokenURI                   |
+| **Register with Metadata** | ~171k gas | With single metadata entry      |
+| **Give Feedback**          | ~276k gas | Includes signature verification |
+| **Revoke Feedback**        | ~294k gas | Marks feedback as revoked       |
+| **Append Response**        | ~300k gas | Add response to feedback        |
+| **Validation Request**     | ~306k gas | Create validation request       |
+| **Validation Response**    | ~418k gas | Submit validation response      |
 
 ### Optimization Techniques
 
@@ -310,11 +320,11 @@ v1.0 is highly optimized for gas efficiency:
 
 ### Comparison with v0.4
 
-| Operation | v0.4 | v1.0 | Improvement |
-|-----------|------|------|-------------|
-| Agent Registration | ~142k | ~99k | **30% reduction** |
-| Feedback | ~76k | ~276k | More features* |
-| Validation Request | ~115k | ~306k | More features* |
+| Operation          | v0.4  | v1.0  | Improvement       |
+| ------------------ | ----- | ----- | ----------------- |
+| Agent Registration | ~142k | ~99k  | **30% reduction** |
+| Feedback           | ~76k  | ~276k | More features*    |
+| Validation Request | ~115k | ~306k | More features*    |
 
 *v1.0 includes signature verification, on-chain storage, and enhanced features
 
@@ -328,25 +338,25 @@ The previous v0.4 implementation remains deployed on testnets for backward compa
 
 #### Ethereum Sepolia
 
-| Contract | Address | Explorer |
-|----------|---------|----------|
-| Identity Registry | `0x127C86a24F46033E77C347258354ee4C739b139C` | [View](https://sepolia.etherscan.io/address/0x127C86a24F46033E77C347258354ee4C739b139C) |
+| Contract            | Address                                      | Explorer                                                                                |
+| ------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Identity Registry   | `0x127C86a24F46033E77C347258354ee4C739b139C` | [View](https://sepolia.etherscan.io/address/0x127C86a24F46033E77C347258354ee4C739b139C) |
 | Reputation Registry | `0x57396214E6E65E9B3788DE7705D5ABf3647764e0` | [View](https://sepolia.etherscan.io/address/0x57396214E6E65E9B3788DE7705D5ABf3647764e0) |
 | Validation Registry | `0x5d332cE798e491feF2de260bddC7f24978eefD85` | [View](https://sepolia.etherscan.io/address/0x5d332cE798e491feF2de260bddC7f24978eefD85) |
 
 #### Base Sepolia
 
-| Contract | Address | Explorer |
-|----------|---------|----------|
-| Identity Registry | `0x19fad4adD9f8C4A129A078464B22E1506275FbDd` | [View](https://sepolia.basescan.org/address/0x19fad4adD9f8C4A129A078464B22E1506275FbDd) |
+| Contract            | Address                                      | Explorer                                                                                |
+| ------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Identity Registry   | `0x19fad4adD9f8C4A129A078464B22E1506275FbDd` | [View](https://sepolia.basescan.org/address/0x19fad4adD9f8C4A129A078464B22E1506275FbDd) |
 | Reputation Registry | `0xA13497975fd3f6cA74081B074471C753b622C903` | [View](https://sepolia.basescan.org/address/0xA13497975fd3f6cA74081B074471C753b622C903) |
 | Validation Registry | `0x6e24aA15e134AF710C330B767018d739CAeCE293` | [View](https://sepolia.basescan.org/address/0x6e24aA15e134AF710C330B767018d739CAeCE293) |
 
 #### Optimism Sepolia
 
-| Contract | Address | Explorer |
-|----------|---------|----------|
-| Identity Registry | `0x19fad4adD9f8C4A129A078464B22E1506275FbDd` | [View](https://sepolia-optimistic.etherscan.io/address/0x19fad4adD9f8C4A129A078464B22E1506275FbDd) |
+| Contract            | Address                                      | Explorer                                                                                           |
+| ------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Identity Registry   | `0x19fad4adD9f8C4A129A078464B22E1506275FbDd` | [View](https://sepolia-optimistic.etherscan.io/address/0x19fad4adD9f8C4A129A078464B22E1506275FbDd) |
 | Reputation Registry | `0xA13497975fd3f6cA74081B074471C753b622C903` | [View](https://sepolia-optimistic.etherscan.io/address/0xA13497975fd3f6cA74081B074471C753b622C903) |
 | Validation Registry | `0x6e24aA15e134AF710C330B767018d739CAeCE293` | [View](https://sepolia-optimistic.etherscan.io/address/0x6e24aA15e134AF710C330B767018d739CAeCE293) |
 
@@ -368,15 +378,15 @@ A web interface for the legacy v0.4 contracts is available:
 
 ### Key Differences: v0.4 vs v1.0
 
-| Feature | v0.4 | v1.0 |
-|---------|------|------|
-| **Identity** | Custom system with domain/address | ERC-721 NFTs with URIStorage |
-| **Reputation** | Pre-authorization pattern | Cryptographic signatures |
-| **Validation** | Hash-based, time-bounded | URI-based, tag system |
-| **Transferability** | No | Yes (via ERC-721) |
-| **NFT Compatible** | No | Yes |
-| **On-chain Data** | Minimal | Scores, tags, composable |
-| **Signature Scheme** | N/A | EIP-191/ERC-1271 |
+| Feature              | v0.4                              | v1.0                         |
+| -------------------- | --------------------------------- | ---------------------------- |
+| **Identity**         | Custom system with domain/address | ERC-721 NFTs with URIStorage |
+| **Reputation**       | Pre-authorization pattern         | Cryptographic signatures     |
+| **Validation**       | Hash-based, time-bounded          | URI-based, tag system        |
+| **Transferability**  | No                                | Yes (via ERC-721)            |
+| **NFT Compatible**   | No                                | Yes                          |
+| **On-chain Data**    | Minimal                           | Scores, tags, composable     |
+| **Signature Scheme** | N/A                               | EIP-191/ERC-1271             |
 
 ---
 
@@ -760,10 +770,10 @@ The Reputation Registry uses industry-standard signature schemes:
 
 ### Authorization Mechanisms
 
-| Registry | Authorization Method |
-|----------|---------------------|
-| Identity Registry | ERC-721 ownership and operator approvals |
-| Reputation Registry | Cryptographic signatures (EIP-191/ERC-1271) |
+| Registry            | Authorization Method                                               |
+| ------------------- | ------------------------------------------------------------------ |
+| Identity Registry   | ERC-721 ownership and operator approvals                           |
+| Reputation Registry | Cryptographic signatures (EIP-191/ERC-1271)                        |
 | Validation Registry | ERC-721 ownership for requests, designated validator for responses |
 
 ### Replay Protection

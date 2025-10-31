@@ -1,0 +1,65 @@
+{
+    "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+    "name": "your-agent",
+    "description": "Agent Description",
+    "image": "https://example.com/profile_image.png",
+    "endpoints": [
+        {
+            "name": "prompt",
+            "endpoint": "https://your-agent.com/prompt",
+            "version": "v0.1.0"
+        },
+        {
+            "name": "x402-LLM",
+            "endpoint": "https://llm.your-agent.com/mcp",
+            "gateway": "",
+            "modelId": "",
+            "providerId": "",
+            "contextLength": 128000,
+            "supportedInputs": [
+                "text",
+                "image",
+                "file",
+                "audio"
+            ],
+            "parameters": {
+                "temperature": 0.5,
+                "max_tokens": 1000,
+                "top_p": 1,
+                "frequency_penalty": 0,
+                "presence_penalty": 0
+            }
+        },
+        {
+            "name": "x402-MCP",
+            "endpoint": "https://mcp.your-agent.com/mcp",
+            "serverName": ""
+        },
+        {
+            "name": "Artifact",
+            "endpoint": "https://artifact.your-agent.com/mcp"
+        },
+        {
+            "name": "metadata",
+            "displayName": "",
+            "homepage": "",
+            "repository": "",
+            "suggestions": [
+                "suggestion1",
+                "suggestion2",
+                "suggestion3"
+            ]
+        }
+    ],
+    "registrations": [
+        {
+            "agentId": "*",
+            "agentRegistry": "eip155:1:{YOUR_AGENT_REGISTRY_ADDRESS}"
+        }
+    ],
+    "supportedTrust": [
+        "reputation",
+        "crypto-economic",
+        "tee-attestation"
+    ]
+}
