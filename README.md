@@ -4,7 +4,10 @@
 - This repo provides a contract reference for deploying an ERC-8004 registry on-chain and demoing it with xNUWA
 - xNUWA app repo: https://github.com/nuwa-protocol/xnuwa.app
 - Agent registration JSON required by xNUWA: see `xnuwa-agent-registration.example.json`
+- Example agent registration (xNUWA-ready): see `nuwa-x402-mcp-demo.json`
 - Everything below is the original upstream README kept for reference
+- Added support for deploying to X Layer (and testnet) with `./deploy.sh xlayer(xlayer_testnet)`
+- X Layer verification via OKLink (forge plugin) is supported. See docs/X_LAYER.md for details.
 - More Docs: https://docs.nuwa.dev/xnuwa/overview
 ---
 
@@ -148,6 +151,13 @@ contract IdentityRegistry is ERC721URIStorage {
   "supportedTrust": ["reputation", "crypto-economic", "tee-attestation"]
 }
 ```
+
+For a concrete, ready-to-host example used with xNUWA, see `nuwa-x402-mcp-demo.json` in the repo root. It includes:
+- `type` set to the ERC-8004 v1 registration schema
+- An `llm` endpoint using `openai/gpt-4o-mini-2024-07-18` via OpenRouter
+- An `mcp` endpoint (`https://x402.xnuwa.app/mcp`) and a small set of `metadata.suggestions`
+
+Note: Additional network support includes X Layer (mainnet and testnet); see "Deploy to X Layer" for details.
 
 **Events**:
 ```solidity
@@ -489,8 +499,32 @@ cp .env.example .env
 forge script script/Deploy.s.sol:Deploy \
     --rpc-url $RPC_URL \
     --broadcast \
-    --verify
+--verify
 ```
+
+### Deploy to X Layer
+
+Add X Layer RPCs and deploy via the script:
+
+```bash
+# .env required values
+PRIVATE_KEY=0x...                             # deployer key
+XLAYER_RPC_URL=https://rpc.xlayer.tech        # mainnet RPC (alt: https://xlayerrpc.okx.com)
+XLAYER_TESTNET_RPC_URL=https://testrpc.xlayer.tech/terigon  # testnet RPC (alt: https://xlayertestrpc.okx.com/terigon)
+
+# Deploy
+./deploy.sh xlayer_testnet   # X Layer Testnet (chainId 1952)
+./deploy.sh xlayer           # X Layer Mainnet (chainId 196)
+
+# Manual Foundry
+forge script script/Deploy.s.sol:Deploy --rpc-url xlayer_testnet --broadcast -vvv
+forge script script/Deploy.s.sol:Deploy --rpc-url xlayer --broadcast -vvv
+```
+
+- Explorer: mainnet https://www.okx.com/web3/explorer/xlayer · testnet https://www.okx.com/web3/explorer/xlayer-test
+- Verification: not configured via `forge verify` yet for X Layer; deploy script skips `--verify` on these networks.
+
+ 
 
 **Deployment Guides**:
 - [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) - Complete multi-chain deployment guide

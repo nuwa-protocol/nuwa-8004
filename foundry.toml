@@ -22,6 +22,11 @@ optimism = "${OPTIMISM_RPC_URL}"
 optimism_sepolia = "${OPTIMISM_SEPOLIA_RPC_URL}"
 mode_testnet = "${MODE_TESTNET_RPC_URL}"
 zg_testnet = "${ZG_TESTNET_RPC_URL}"
+## X Layer
+# Mainnet (chainId 196)
+xlayer = "${XLAYER_RPC_URL}"
+# Testnet (chainId 1952)
+xlayer_testnet = "${XLAYER_TESTNET_RPC_URL}"
 
 # Etherscan verification
 [etherscan]
@@ -34,3 +39,8 @@ arbitrum_sepolia = { key = "${ARBISCAN_API_KEY}", url = "https://api-sepolia.arb
 optimism = { key = "${OPTIMISTIC_ETHERSCAN_API_KEY}", url = "https://api-optimistic.etherscan.io/api" }
 optimism_sepolia = { key = "${OPTIMISTIC_ETHERSCAN_API_KEY}", url = "https://api-sepolia-optimistic.etherscan.io/api" }
 mode_testnet = { key = "not_required", url = "https://sepolia.explorer.mode.network/api?" }
+## NOTE: X Layer explorer does not expose a standard Etherscan-compatible API as of this config.
+# Verification via `forge verify` may not work out of the box. Deployments will skip `--verify` on these networks.
+# If OKX exposes an Etherscan-compatible endpoint later, you can add entries like below and enable verification in deploy.sh.
+# xlayer = { key = "${OKX_EXPLORER_API_KEY}", url = "https://www.okx.com/web3/explorer/xlayer/api" }
+# xlayer_testnet = { key = "${OKX_EXPLORER_API_KEY}", url = "https://www.okx.com/web3/explorer/xlayer-test/api" }

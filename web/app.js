@@ -93,6 +93,7 @@ class TrustlessAgentsApp {
         this.setupTabNavigation();
         await this.checkWalletConnection();
         
+        
         // Don't auto-discover - let users choose their exploration method
         console.log('🎯 ERC-8004 Agent Explorer ready - choose Quick Search or Discover All');
     }
