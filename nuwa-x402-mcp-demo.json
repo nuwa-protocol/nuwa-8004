@@ -1,37 +1,32 @@
 {
-  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
-  "name": "x402 MCP Demo",
-  "description": "The Model fee is flat. Waiting for v2's upto schema. 4o-mini is cheap enough but please go easy on it. I have no VC to back me for LLM fee.",
-  "image": "https://example.com/placeholder.png",
-  "endpoints": [
-    {
-      "name": "llm",
-      "endpoint": "https://gateway.example.com/llm",
-      "modelId": "openai/gpt-4o-mini-2024-07-18",
-      "providerId": "openrouter",
-      "contextLength": 128000,
-      "supportedInputs": [
-        "text",
-        "image",
-        "file"
-      ],
-      "parameters": {}
-    },
-    {
-      "name": "metadata",
-      "displayName": "x402 MCP Demo",
-      "suggestions": [
-        "give me a random number between 1 and 10",
-        "what is 1 plus 1?",
-        "write an article about ai and crypto",
-        "hi!"
-      ]
-    },
-    {
-      "name": "mcp",
-      "endpoint": "https://x402.xnuwa.app/mcp",
-      "serverName": "mcp-fot"
-    }
-  ]
+	"type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+	"name": "x402 MCP Demo",
+	"description": "A test Nuwa AI on-chain agent deployed on X Layer ERC8004 registry",
+	"image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafybeigmzd5vjmezjp6hc6wqoue7m54qhn6ccujsdaoxp2axjm63xamrn4",
+	"endpoints": [
+		{
+			"name": "llm",
+			"endpoint": "https://gateway.example.com/llm",
+			"modelId": "openai/gpt-4o-mini-2024-07-18",
+			"providerId": "openrouter",
+			"contextLength": 128000,
+			"supportedInputs": ["text", "image", "file"],
+			"parameters": {}
+		},
+		{
+			"name": "metadata",
+			"displayName": "x402 MCP Demo",
+			"suggestions": [
+				"give me a random number between 1 and 10",
+				"what is 1 plus 1?",
+				"write an article about ai and crypto",
+				"hi!"
+			]
+		},
+		{
+			"name": "mcp",
+			"endpoint": "https://x402-services.x402ai.app/mcp",
+			"serverName": "mcp-demo"
+		}
+	]
 }
-

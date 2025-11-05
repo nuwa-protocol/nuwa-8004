@@ -39,7 +39,7 @@ contract IdentityRegistry is ERC721URIStorage, ReentrancyGuard, IIdentityRegistr
     /**
      * @dev Initializes the ERC-721 contract with name and symbol
      */
-    constructor() ERC721("ERC-8004 Trustless Agent", "AGENT") {
+    constructor() ERC721("ERC-8004 Nuwa AI Agent Identity Registry", "AGENT") {
         // Agent IDs start from 1 (0 is reserved for non-existent agents)
         _agentIdCounter.increment();
     }
