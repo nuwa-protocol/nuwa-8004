@@ -1,0 +1,42 @@
+{
+	"type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+	"name": "Nuwa AI Editor - Your Friendly Writing Assistant",
+	"description": "Enhance your writing experience with the power of AI. ",
+	"image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreicq73ji42376enxkbg3dnlb5cibuyyvpqhsq6syok6ggejtjnc5za",
+	"endpoints": [
+		{
+			"name": "prompt",
+			"value": "## Your Role\nYou are an editing assistant with access to the editor tools.\n\n## Rules\n- Always fetch the latest content from the editor before making any edits.\n- When using an AI-generation tool, include sufficient context in the prompt to ensure relevant output.\n- You can access the user's current selection(s) in the editor; see User Selections below.\n\n## User Selections\n{{artifact_selections}}"
+		},
+		{
+			"name": "llm",
+			"modelId": "openai/gpt-4o-2024-11-20",
+			"providerId": "openrouter",
+			"contextLength": 128000,
+			"supportedInputs": ["text", "image", "file"],
+			"parameters": {}
+		},
+		{
+			"name": "artifact",
+			"endpoint": "https://nuwa-note-artifact.vercel.app/"
+		},
+		{
+			"name": "metadata",
+			"idName": "nuwa_note_assistant",
+			"displayName": "Nuwa AI Editor - Your Friendly Writing Assistant",
+			"description": "Enhance your writing experience with the power of AI. ",
+			"introduction": "# Nuwa AI Editor: Your Friendly Editing Assistant\n\nUnlock your creativity and enhance your writing process with Nuwa AI Editor, a sophisticated yet approachable AI-powered writing assistant designed to help you craft compelling content effortlessly. Whether you're working on articles, essays, marketing copy, or creative storytelling, Nuwa AI Editor is here to support your writing journey.",
+			"tags": ["Content Writing", "Tools"],
+			"homepage": "https://github.com/nuwa-protocol/nuwa-caps",
+			"repository": "https://github.com/nuwa-protocol/nuwa-caps",
+			"suggestions": [
+				"Can you write an article about AI?",
+				"Can you tighten verbs and remove filler words1",
+				"Which sentences are redundant or repetitive?",
+				"Can you simplify this to an 8th-grade level?",
+				"Can you rewrite this for clarity and brevity?",
+				"Can you tighten verbs and remove filler words?"
+			]
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Blockscout",
+  "description": "Integrates with Blockscout API MCP to fetch blockchain data\u2014balances, tokens, NFTs, contract metadata.",
+  "image": "https://avatars.githubusercontent.com/u/45625840?s=200&v=4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": ""
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "mcp",
+      "endpoint": "https://mcp.blockscout.com/mcp",
+      "serverName": "tavily-mcp"
+    },
+    {
+      "name": "metadata",
+      "idName": "blockscout_cap",
+      "displayName": "Blockscout",
+      "description": "Integrates with Blockscout API MCP to fetch blockchain data\u2014balances, tokens, NFTs, contract metadata.",
+      "introduction": "Integrates with Blockscout API MCP to fetch blockchain data\u2014balances, tokens, NFTs, contract metadata.",
+      "tags": [
+        "Crypto"
+      ],
+      "homepage": "https://www.blockscout.com/",
+      "repository": "https://github.com/blockscout/mcp-server",
+      "thumbnail": "https://avatars.githubusercontent.com/u/45625840?s=200&v=4",
+      "suggestions": [
+        "Fetch the ERC-20 token balances for 0x0000000000000000000000000000000000000000",
+        "List the most recent NFT transfers for a given wallet",
+        "Retrieve contract metadata for a deployed address on Base"
+      ]
+    }
+  ]
+}

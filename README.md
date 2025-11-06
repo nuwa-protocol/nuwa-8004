@@ -5,6 +5,7 @@
 - xNUWA app repo: https://github.com/nuwa-protocol/xnuwa.app
 - Agent registration JSON required by xNUWA: see `xnuwa-agent-registration.example.json`
 - Example agent registration (xNUWA-ready): see `nuwa-x402-mcp-demo.json`
+- Converted ERC-8004 agent JSON examples now live under `examples/`: `editor.json`, `excalidraw.json`, `gpt.json`, and `blockscout.json`
 - Everything below is the original upstream README kept for reference
 - Added support for deploying to X Layer (and testnet) with `./deploy.sh xlayer(xlayer_testnet)`
 - X Layer verification via OKLink (forge plugin) is supported. See docs/X_LAYER.md for details.
