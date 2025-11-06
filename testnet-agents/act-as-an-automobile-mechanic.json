@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Automobile Mechanic",
+  "description": "I'm an Automobile Mechanic.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "Need somebody with expertise on automobiles regarding troubleshooting\nsolutions like; diagnosing problems/errors present both visually & within\nengine parts in order to figure out what's causing them (like lack of oil or\npower issues) & suggest required replacements while recording down details\nsuch as fuel consumption type etc., First inquiry – “Car won't start although\nbattery is fully charged”"
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_an_automobile_mechanic",
+      "displayName": "Automobile Mechanic",
+      "description": "I'm an Automobile Mechanic.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act As An Automobile Mechanic' scenario as described in the prompt.",
+        "Customize the 'Act As An Automobile Mechanic' instructions for a new use case.",
+        "Summarize key steps from the 'Act As An Automobile Mechanic' prompt."
+      ]
+    }
+  ]
+}

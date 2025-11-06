@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Dietitian",
+  "description": "I'm a Dietitian.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "As a dietitian, I would like to design a vegetarian recipe for 2 people that\nhas approximate 500 calories per serving and has a low glycemic index. Can you\nplease provide a suggestion?"
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_a_dietitian",
+      "displayName": "Dietitian",
+      "description": "I'm a Dietitian.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as a Dietitian' scenario as described in the prompt.",
+        "Customize the 'Act as a Dietitian' instructions for a new use case.",
+        "Summarize key steps from the 'Act as a Dietitian' prompt."
+      ]
+    }
+  ]
+}

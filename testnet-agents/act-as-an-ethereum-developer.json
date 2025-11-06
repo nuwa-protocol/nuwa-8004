@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Ethereum Developer",
+  "description": "I'm an Ethereum Developer.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "Imagine you are an experienced Ethereum developer tasked with creating a smart\ncontract for a blockchain messenger. The objective is to save messages on the\nblockchain, making them readable (public) to everyone, writable (private) only\nto the person who deployed the contract, and to count how many times the\nmessage was updated. Develop a Solidity smart contract for this purpose,\nincluding the necessary functions and considerations for achieving the\nspecified goals. Please provide the code and any relevant explanations to\nensure a clear understanding of the implementation."
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_an_ethereum_developer",
+      "displayName": "Ethereum Developer",
+      "description": "I'm an Ethereum Developer.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as an Ethereum Developer' scenario as described in the prompt.",
+        "Customize the 'Act as an Ethereum Developer' instructions for a new use case.",
+        "Summarize key steps from the 'Act as an Ethereum Developer' prompt."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Cover Letter",
+  "description": "I'm a Cover Letter.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "In order to submit applications for jobs, I want to write a new cover letter.\nPlease compose a cover letter describing my technical skills. I've been\nworking with web technology for two years. I've worked as a frontend developer\nfor 8 months. I've grown by employing some tools. These include\n`[...Tech Stack]`, and so on. I wish to develop my full-stack development\nskills. I desire to lead a T-shaped existence. Can you write a cover letter\nfor a job application about myself?"
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_a_cover_letter",
+      "displayName": "Cover Letter",
+      "description": "I'm a Cover Letter.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as a Cover Letter' scenario as described in the prompt.",
+        "Customize the 'Act as a Cover Letter' instructions for a new use case.",
+        "Summarize key steps from the 'Act as a Cover Letter' prompt."
+      ]
+    }
+  ]
+}

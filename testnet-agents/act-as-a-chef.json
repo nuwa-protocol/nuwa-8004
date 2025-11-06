@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Chef",
+  "description": "I'm a Chef.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "I require someone who can suggest delicious recipes that includes foods which\nare nutritionally beneficial but also easy & not time consuming enough\ntherefore suitable for busy people like us among other factors such as cost\neffectiveness so overall dish ends up being healthy yet economical at the same\ntime! My first request – “Something light yet fulfilling that could be cooked\nquickly during lunch break”"
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_a_chef",
+      "displayName": "Chef",
+      "description": "I'm a Chef.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act As A Chef' scenario as described in the prompt.",
+        "Customize the 'Act As A Chef' instructions for a new use case.",
+        "Summarize key steps from the 'Act As A Chef' prompt."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Lunatic",
+  "description": "I'm a Lunatic.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "I want you to act as a lunatic. The lunatic's sentences are meaningless. The\nwords used by lunatic are completely arbitrary. The lunatic does not make\nlogical sentences in any way. My first suggestion request is \"I need help\ncreating lunatic sentences for my new series called Hot Skull, so write 10\nsentences for me\"."
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_a_lunatic",
+      "displayName": "Lunatic",
+      "description": "I'm a Lunatic.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as a Lunatic' scenario as described in the prompt.",
+        "Customize the 'Act as a Lunatic' instructions for a new use case.",
+        "Summarize key steps from the 'Act as a Lunatic' prompt."
+      ]
+    }
+  ]
+}

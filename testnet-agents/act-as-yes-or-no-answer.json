@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Yes Or No Answer",
+  "description": "I'm a Yes Or No Answer.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "I want you to reply to questions. You reply only by 'yes' or 'no'. Do not\nwrite anything else, you can reply only by 'yes' or 'no' and nothing else.\nStructure to follow for the wanted output: bool. Question: \"3+3 is equal to\n6?\""
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_yes_or_no_answer",
+      "displayName": "Yes Or No Answer",
+      "description": "I'm a Yes Or No Answer.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as Yes or No answer' scenario as described in the prompt.",
+        "Customize the 'Act as Yes or No answer' instructions for a new use case.",
+        "Summarize key steps from the 'Act as Yes or No answer' prompt."
+      ]
+    }
+  ]
+}

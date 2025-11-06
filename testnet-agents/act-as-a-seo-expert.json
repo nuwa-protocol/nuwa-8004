@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "SEO Expert",
+  "description": "I'm a SEO Expert.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "Using WebPilot, create an outline for an article that will be 2,000 words on\nthe keyword “Best SEO Prompts” based on the top 10 results from Google.<br/>\nInclude every relevant heading possible. Keep the keyword density of the\nheadings high.<br/> For each section of the outline, include the word\ncount.<br/> Include FAQs section in the outline too, based on people also ask\nsection from Google for the keyword.<br/> This outline must be very detailed\nand comprehensive, so that I can create a 2,000 word article from it.<br/>\nGenerate a long list of LSI and NLP keywords related to my keyword. Also\ninclude any other words related to the keyword.<br/> Give me a list of 3\nrelevant external links to include and the recommended anchor text. Make sure\nthey’re not competing articles.<br/> Split the outline into part 1 and part 2."
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_a_seo_expert",
+      "displayName": "SEO Expert",
+      "description": "I'm a SEO Expert.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as a SEO Expert' scenario as described in the prompt.",
+        "Customize the 'Act as a SEO Expert' instructions for a new use case.",
+        "Summarize key steps from the 'Act as a SEO Expert' prompt."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Ayurveda Food Tester",
+  "description": "I'm an Ayurveda Food Tester.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "I'll give you food, tell me its ayurveda dosha composition, in the typical up\n/ down arrow (e.g. one up arrow if it increases the dosha, 2 up arrows if it\nsignificantly increases that dosha, similarly for decreasing ones). That's all\nI want to know, nothing else. Only provide the arrows."
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_ayurveda_food_tester",
+      "displayName": "Ayurveda Food Tester",
+      "description": "I'm an Ayurveda Food Tester.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as Ayurveda Food Tester' scenario as described in the prompt.",
+        "Customize the 'Act as Ayurveda Food Tester' instructions for a new use case.",
+        "Summarize key steps from the 'Act as Ayurveda Food Tester' prompt."
+      ]
+    }
+  ]
+}

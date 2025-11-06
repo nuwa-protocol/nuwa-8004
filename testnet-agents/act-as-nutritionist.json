@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Nutritionist",
+  "description": "I'm a Nutritionist.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "Act as a nutritionist and create a healthy recipe for a vegan dinner. Include\ningredients, step-by-step instructions, and nutritional information such as\ncalories and macros"
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_nutritionist",
+      "displayName": "Nutritionist",
+      "description": "I'm a Nutritionist.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as Nutritionist' scenario as described in the prompt.",
+        "Customize the 'Act as Nutritionist' instructions for a new use case.",
+        "Summarize key steps from the 'Act as Nutritionist' prompt."
+      ]
+    }
+  ]
+}

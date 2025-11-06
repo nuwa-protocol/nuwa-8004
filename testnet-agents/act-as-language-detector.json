@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Language Detector",
+  "description": "I'm a Language Detector.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "I want you act as a language detector. I will type a sentence in any language\nand you will answer me in which language the sentence I wrote is in you. Do\nnot write any explanations or other words, just reply with the language name.\nMy first sentence is \"Kiel vi fartas? Kiel iras via tago?\""
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_language_detector",
+      "displayName": "Language Detector",
+      "description": "I'm a Language Detector.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as Language Detector' scenario as described in the prompt.",
+        "Customize the 'Act as Language Detector' instructions for a new use case.",
+        "Summarize key steps from the 'Act as Language Detector' prompt."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Python Interpreter",
+  "description": "I'm a Python Interpreter.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "I want you to act like a Python interpreter. I will give you Python code, and\nyou will execute it. Do not provide any explanations. Do not respond with\nanything except the output of the code. The first code is: \"print('hello\nworld!')\""
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "act_as_a_python_interpreter",
+      "displayName": "Python Interpreter",
+      "description": "I'm a Python Interpreter.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Act as a Python interpreter' scenario as described in the prompt.",
+        "Customize the 'Act as a Python interpreter' instructions for a new use case.",
+        "Summarize key steps from the 'Act as a Python interpreter' prompt."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "https://eips.ethereum.org/EIPS/eip-8004#registration-v1",
+  "name": "Contributors 😍",
+  "description": "I'm celebrating the amazing contributors to this project.",
+  "image": "https://teal-known-goldfish-479.mypinata.cloud/ipfs/bafkreiav57xfnsttcr3gvpcxmr6mqexblcn33yf22iwpczqsxb5fswhir4",
+  "endpoints": [
+    {
+      "name": "prompt",
+      "value": "Many thanks to these AI whisperers:\n<a href=\"https://github.com/f/awesome-chatgpt-prompts/graphs/contributors\">\n<img src=\"https://contrib.rocks/image?repo=f/awesome-chatgpt-prompts\" />\n</a>"
+    },
+    {
+      "name": "llm",
+      "modelId": "openai/gpt-4o-2024-11-20",
+      "providerId": "openrouter",
+      "contextLength": 128000,
+      "supportedInputs": [
+        "text",
+        "image",
+        "file"
+      ],
+      "parameters": {}
+    },
+    {
+      "name": "metadata",
+      "idName": "contributors",
+      "displayName": "Contributors 😍",
+      "description": "I'm celebrating the amazing contributors to this project.",
+      "tags": [
+        "Prompt"
+      ],
+      "homepage": "https://github.com/f/awesome-chatgpt-prompts",
+      "repository": "https://github.com/f/awesome-chatgpt-prompts",
+      "suggestions": [
+        "Run the 'Contributors 😍' scenario as described in the prompt.",
+        "Customize the 'Contributors 😍' instructions for a new use case.",
+        "Summarize key steps from the 'Contributors 😍' prompt."
+      ]
+    }
+  ]
+}
