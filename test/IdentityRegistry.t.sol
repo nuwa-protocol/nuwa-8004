@@ -23,7 +23,8 @@ contract IdentityRegistryTest is Test {
     event MetadataSet(uint256 indexed agentId, string indexed indexedKey, string key, bytes value);
     
     function setUp() public {
-        registry = new IdentityRegistry();
+        // Use 0 for unlimited agents in tests
+        registry = new IdentityRegistry(0);
     }
     
     // ============ Registration Tests ============
@@ -282,7 +283,7 @@ contract IdentityRegistryTest is Test {
     }
     
     function test_Name_AndSymbol() public {
-        assertEq(registry.name(), "ERC-8004 Trustless Agent");
+        assertEq(registry.name(), "ERC-8004 Nuwa AI Agent Identity Registry");
         assertEq(registry.symbol(), "AGENT");
     }
     
@@ -355,5 +356,79 @@ contract IdentityRegistryTest is Test {
         assertEq(registry.getMetadata(agentId, "test"), value);
         
         vm.stopPrank();
+    }
+    
+    // ============ MaxAgentCount Tests ============
+    
+    function test_MaxAgentCount_Unlimited() public {
+        // Test with 0 (unlimited)
+        IdentityRegistry unlimitedRegistry = new IdentityRegistry(0);
+        assertEq(unlimitedRegistry.maxAgentCount(), 0, "Should be unlimited");
+        
+        // Should be able to register multiple agents
+        vm.prank(alice);
+        unlimitedRegistry.register(TOKEN_URI);
+        
+        vm.prank(bob);
+        unlimitedRegistry.register(TOKEN_URI_2);
+        
+        assertEq(unlimitedRegistry.totalAgents(), 2, "Should have 2 agents");
+    }
+    
+    function test_MaxAgentCount_Limited() public {
+        // Test with limit of 3
+        IdentityRegistry limitedRegistry = new IdentityRegistry(3);
+        assertEq(limitedRegistry.maxAgentCount(), 3, "Should have limit of 3");
+        
+        // Should be able to register up to 3 agents
+        vm.prank(alice);
+        limitedRegistry.register(TOKEN_URI);
+        assertEq(limitedRegistry.totalAgents(), 1);
+        
+        vm.prank(bob);
+        limitedRegistry.register(TOKEN_URI_2);
+        assertEq(limitedRegistry.totalAgents(), 2);
+        
+        vm.prank(charlie);
+        limitedRegistry.register();
+        assertEq(limitedRegistry.totalAgents(), 3);
+        
+        // Should fail when trying to register the 4th agent
+        vm.prank(alice);
+        vm.expectRevert("Max agent count reached");
+        limitedRegistry.register(TOKEN_URI);
+    }
+    
+    function test_MaxAgentCount_ExactLimit() public {
+        // Test with limit of 1
+        IdentityRegistry singleRegistry = new IdentityRegistry(1);
+        
+        vm.prank(alice);
+        singleRegistry.register(TOKEN_URI);
+        assertEq(singleRegistry.totalAgents(), 1);
+        
+        // Should fail when trying to register the 2nd agent
+        vm.prank(bob);
+        vm.expectRevert("Max agent count reached");
+        singleRegistry.register(TOKEN_URI_2);
+    }
+    
+    function test_MaxAgentCount_CheckBeforeMint() public {
+        // Test that the check happens before incrementing counter
+        IdentityRegistry limitedRegistry = new IdentityRegistry(2);
+        
+        vm.prank(alice);
+        limitedRegistry.register(TOKEN_URI);
+        
+        vm.prank(bob);
+        limitedRegistry.register(TOKEN_URI_2);
+        
+        // Counter should be at 2, which is the limit
+        assertEq(limitedRegistry.totalAgents(), 2);
+        
+        // Next registration should fail
+        vm.prank(charlie);
+        vm.expectRevert("Max agent count reached");
+        limitedRegistry.register();
     }
 }

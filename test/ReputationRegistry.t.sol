@@ -61,7 +61,7 @@ contract ReputationRegistryTest is Test {
         agentOwner = vm.addr(agentOwnerPk);
         client = vm.addr(clientPk);
         
-        identityRegistry = new IdentityRegistry();
+        identityRegistry = new IdentityRegistry(0); // 0 means unlimited
         reputationRegistry = new ReputationRegistry(address(identityRegistry));
         
         // Register agent

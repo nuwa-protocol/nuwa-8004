@@ -46,7 +46,7 @@ contract ValidationRegistryTest is Test {
     );
 
     function setUp() public {
-        identityRegistry = new IdentityRegistry();
+        identityRegistry = new IdentityRegistry(0); // 0 means unlimited
         validationRegistry = new ValidationRegistry(address(identityRegistry));
         
         // Register agent

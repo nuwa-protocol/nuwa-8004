@@ -28,6 +28,9 @@ contract IdentityRegistry is ERC721URIStorage, ReentrancyGuard, IIdentityRegistr
 
     // ============ State Variables ============
     
+    /// @dev Maximum number of agents that can be registered (0 means unlimited)
+    uint256 public immutable maxAgentCount;
+    
     /// @dev Counter for agent IDs (tokenIds)
     Counters.Counter private _agentIdCounter;
     
@@ -38,8 +41,10 @@ contract IdentityRegistry is ERC721URIStorage, ReentrancyGuard, IIdentityRegistr
     
     /**
      * @dev Initializes the ERC-721 contract with name and symbol
+     * @param maxAgentCount_ Maximum number of agents that can be registered (0 means unlimited)
      */
-    constructor() ERC721("ERC-8004 Nuwa AI Agent Identity Registry", "AGENT") {
+    constructor(uint256 maxAgentCount_) ERC721("ERC-8004 Nuwa AI Agent Identity Registry", "AGENT") {
+        maxAgentCount = maxAgentCount_;
         // Agent IDs start from 1 (0 is reserved for non-existent agents)
         _agentIdCounter.increment();
     }
@@ -149,6 +154,11 @@ contract IdentityRegistry is ERC721URIStorage, ReentrancyGuard, IIdentityRegistr
         address to, 
         string memory tokenURI_
     ) internal returns (uint256 agentId) {
+        // Check maxAgentCount limit (0 means unlimited)
+        if (maxAgentCount > 0) {
+            require(_agentIdCounter.current() <= maxAgentCount, "Max agent count reached");
+        }
+        
         agentId = _agentIdCounter.current();
         _agentIdCounter.increment();
         

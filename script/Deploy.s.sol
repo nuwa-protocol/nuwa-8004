@@ -21,11 +21,15 @@ contract Deploy is Script {
     function run() external {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         
+        // Get maxAgentCount from environment variable, default to 0 (unlimited)
+        uint256 maxAgentCount = vm.envOr("MAX_AGENT_COUNT", uint256(0));
+        
         vm.startBroadcast(deployerPrivateKey);
         
         // 1. Deploy IdentityRegistry (no dependencies)
         console.log("Deploying IdentityRegistry...");
-        IdentityRegistry identityRegistry = new IdentityRegistry();
+        console.log("Max Agent Count:", maxAgentCount == 0 ? "Unlimited" : vm.toString(maxAgentCount));
+        IdentityRegistry identityRegistry = new IdentityRegistry(maxAgentCount);
         console.log("IdentityRegistry deployed at:", address(identityRegistry));
         
         // 2. Deploy ReputationRegistry (depends on IdentityRegistry)
@@ -63,9 +67,13 @@ contract DeployIdentityOnly is Script {
     function run() external {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         
+        // Get maxAgentCount from environment variable, default to 0 (unlimited)
+        uint256 maxAgentCount = vm.envOr("MAX_AGENT_COUNT", uint256(0));
+        
         vm.startBroadcast(deployerPrivateKey);
         
-        IdentityRegistry identityRegistry = new IdentityRegistry();
+        console.log("Max Agent Count:", maxAgentCount == 0 ? "Unlimited" : vm.toString(maxAgentCount));
+        IdentityRegistry identityRegistry = new IdentityRegistry(maxAgentCount);
         console.log("IdentityRegistry deployed at:", address(identityRegistry));
         
         vm.stopBroadcast();
